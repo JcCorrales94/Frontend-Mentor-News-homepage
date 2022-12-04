@@ -15,22 +15,28 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { margin-bottom: 4rem;}
   </style>
 </head>
 <body>
   <header class="container">
     <nav class="nav">
       <img class="nav_img" src="./assets/images/logo.svg" alt="logo">
-      <li class="nav_link"><a href="#">Home</a></li>
-      <li class="nav_link"><a href="#">New</a></li>
-      <li class="nav_link"><a href="#">Popular</a></li>
-      <li class="nav_link"><a href="#">Treding</a></li>
-      <li class="nav_link"><a href="#">Categories</a></li>
+      <ul class="nav_ul">
+        <li class="nav_link"><a href="#">Home</a></li>
+        <li class="nav_link"><a href="#">New</a></li>
+        <li class="nav_link"><a href="#">Popular</a></li>
+        <li class="nav_link"><a href="#">Treding</a></li>
+        <li class="nav_link"><a href="#">Categories</a></li>
+      </ul>
+      <img class="nav_menu" onclick="nav_menu();"  src="./assets/images/icon-menu.svg" alt="menu">
+      <img class="nav_close" onclick="nav_close();" src="./assets/images/icon-menu-close.svg" alt="close">
     </nav>
   </header>
 
   <main class="container__main">
     <section class="bedside">
+      <img class="bedside__mobile" src="./assets/images/image-web-3-mobile.jpg" alt="img-mobile">
       <img class="bedside__img" src="./assets/images/image-web-3-desktop.jpg" alt="img-desktop">
       <h1 class="bedside__tittle">The Bright Future of Web 3.0?</h1>
       <div class="bedside__read">
@@ -81,4 +87,20 @@
     Coded by <a href="https://github.com/JcCorrales94">José Carlos Corrales</a>.
   </div>
 </body>
+
+  <script>
+    let nav_menu = document.querySelector('nav_menu');
+    let nav_close = document.querySelector('nav_close');
+    let nav_ul = document.querySelector('nav_ul');
+
+    function nav_menu(){
+      nav_ul.classList.add('active');
+    }
+
+    function nav_close(){
+      nav_ul.classList.remove('active');
+    }
+
+  </script>
+
 </html>

@@ -205,7 +205,7 @@ p{
     display: none;
   }
 
- .nav_ul .active{
+ .nav_ul2{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -215,12 +215,19 @@ p{
     padding: 20rem 0 0 3rem;
     right: 0;
     top: 0;
+    gap: 3rem;
     width: 70%;
     height: 100%;
   }
 
   .nav_close{
     display: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 10;
+  }
+   .nav_close2{
+    display: inline;
     width: 3.5rem;
     height: 3.5rem;
     z-index: 10;

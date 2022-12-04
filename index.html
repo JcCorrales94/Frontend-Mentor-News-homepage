@@ -22,15 +22,15 @@
   <header class="container">
     <nav class="nav">
       <img class="nav_img" src="./assets/images/logo.svg" alt="logo">
-      <ul class="nav_ul">
+      <ul class="nav_ul" id="nav_ul">
         <li class="nav_link"><a href="#">Home</a></li>
         <li class="nav_link"><a href="#">New</a></li>
         <li class="nav_link"><a href="#">Popular</a></li>
         <li class="nav_link"><a href="#">Treding</a></li>
         <li class="nav_link"><a href="#">Categories</a></li>
       </ul>
-      <img class="nav_menu" onclick="nav_menu();"  src="./assets/images/icon-menu.svg" alt="menu">
-      <img class="nav_close" onclick="nav_close();" src="./assets/images/icon-menu-close.svg" alt="close">
+      <img class="nav_menu" id="nav_menu" onclick="navMenu();"  src="./assets/images/icon-menu.svg" alt="menu">
+      <img class="nav_close" id="nav_close" onclick="navClose();" src="./assets/images/icon-menu-close.svg" alt="close">
     </nav>
   </header>
 
@@ -88,19 +88,21 @@
   </div>
 </body>
 
-  <script>
-    let nav_menu = document.querySelector('nav_menu');
-    let nav_close = document.querySelector('nav_close');
-    let nav_ul = document.querySelector('nav_ul');
+<script>
+  let nav_menu = document.querySelector('nav_menu');
+  let nav_close = document.querySelector('nav_close');
+  let nav_ul = document.querySelector('nav_ul');
 
-    function nav_menu(){
-      nav_ul.classList.add('active');
-    }
+  function navMenu(){
+    document.getElementById("nav_ul").className = "nav_ul2";
+    document.getElementById("nav_close").className = "nav_close2";
+  }
 
-    function nav_close(){
-      nav_ul.classList.remove('active');
-    }
+  function navClose(){
+    document.getElementById("nav_ul").className = "nav_ul";
+    document.getElementById("nav_close").className = "nav_close";
+  }
 
-  </script>
+</script>
 
 </html>
